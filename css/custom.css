@@ -1,0 +1,111 @@
+#carrito {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background-color: white;
+  padding: 20px;
+  min-height: 400px;
+  min-width: 300px;
+}
+
+.bodyC {
+  background-color: #0B615E;
+}
+
+.colorf {
+  background-color: #086A87;
+}
+
+.navbar {
+  font-size: 20px;
+  font-family: Georgia;
+}
+
+.ico {
+  width: 18px;
+  height: 18px;
+}
+
+.te {
+  font-size: 15px;
+  font-family: Georgia;
+}
+
+.tea {
+  font-size: 25px;
+  font-family: Georgia;
+}
+
+.btn-outline-success2:hover {
+  color: #fff;
+  background-color: #086A87;
+  border-color: #086A87;
+}
+
+.ic {
+  width: 30px;
+  height: 30px;
+}
+
+.iconi {
+  width: 50px;
+  height: 50px;
+}
+
+.titulo-categorias {
+  display: none;
+}
+
+.texto-categorias {
+  display: none;
+}
+
+.tz {
+  font-size: 12px;
+  font-family: Georgia;
+  position: absolute;
+}
+
+.cantidad
+{
+  width: 50px;
+}
+
+/* .tz:hover{
+  cursor: text;
+}
+
+.tz img:hover{
+  cursor: default;
+} */
+
+.visionMision
+{
+  font-family: Calibri;
+  color: #1B4F72;
+  font-size: 40px;
+  font-style: bold;
+}
+.texto
+{
+  font-size: 20px;
+  font-family:Georgia;
+}
+
+.fondo{
+  background-image: url(../Imagenes/fondo.jpg);
+  background-attachment: fixed;
+}
+
+.fondo2
+{
+  background-color: #FFFF;
+  opacity: 0.90;
+}
+.titulos
+{
+  font-family: Calibri;
+  color: #1B4F72;
+}

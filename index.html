@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Fierro Mallet</title>
+  <!--llamando el bootsstrap-->
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/pricing/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="plugins/bootstrap/js/bootstrap.js"></script>
+  <link rel="icon" href="Imagenes/logo.png">
+
+
+</head>
+
+<body class="bg-light" onload="checarCookie()">
+
+  <div class="container py-3">
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light" id="navegar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="Imagenes/logo.png" width="55" height="50" alt="Logo"></a>
+        <a class="navbar-brand" href="#"><img src="Imagenes/tema.png" width="180" height="50" alt="Tema"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#navegar" aria-current="page">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Acercade">Acerca</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Informacion
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="html/Sucursales.html">Sucursales</a></li>
+                <li><a class="dropdown-item" href="html/contactanos.html">Servicio Cliente</a></li>
+                <li><a class="dropdown-item" href="html/menuCompleto.html">Menú Completo</a></li>
+                <li><a class="dropdown-item" href="html/nuestraferreteria.html">Acerca de la empresa</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-expand-sm btn-outline-success" type="submit"><img src="Imagenes/lupa.png" class="ico"
+                alt="Lupa"></button>
+          </form>
+
+          <button class="btn btn-expand-sm" type="button" data-bs-toggle="collapse" id="mostrarCarro"
+            href="#"><img src="Imagenes/carro.png" class="ic" alt="carrito">
+          </button>
+            <div class="table-responsive tz" id="carrito">
+              <table id="lista-carrito" class="table-table-responsive">
+                <thead>
+                  <tr>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <div class="input-group mb-3 justify-content-end">
+                <span class="input-group-text">Total Carrito</span>
+                <span class="input-group-text">$</span>
+                <!-- <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"> -->
+                <span class="input-group-text" id="total-carrito">0.00</span>
+              </div>
+              <div class="btn-group">
+                <a href="#" class="btn btn-primary" id="btn-comprar" onclick="mensajeCarritoVacio(this)">Comprar</a>
+                <a href="#" id="vaciar-carrito" class="btn btn-danger">Vaciar Carrito</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators" id="botonesCarrousel">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Imagenes/carrusel1.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="Imagenes/carrusel2.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="Imagenes/carrusel3.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button> -->
+    </div>
+    <br>
+
+
+      <h3 class="text-sm-center">Promociones del més de Junio</h3><br>
+
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center lista-productos p-5">
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-8 text-white bg-success mb-3">
+                    <h5 class="my-0 fw-normal">Martillo madera STANLEY 13oz</h5>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title pricing-card-title">$4.75<small class="text-muted fw-light"> PZA</small>
+                    </h3>
+                    <ul class="list-unstyled mt-2 mb-4">
+                      <li>
+                        <img src="Imagenes/martillo.jpg" class="img-thumbnail" alt="Cinque Terre" width="125"
+                          height="136">
+                      </li>
+                    </ul>
+                    <a href="html/compra.html">
+                      <button type="button"
+                        class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button>
+                      </a>
+                      <button type="button"
+                      class="text-center btn btn-sm btn-outline-success agregar-carrito"
+                      onclick="agregarProducto2(this)" data-id="11"><img src="Imagenes/carro.png" class="ico"
+                        alt="Carrito"></button>
+                    <input class="cantidad"  type="number" value="1" min="1">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-8 text-white bg-success mb-3">
+                    <h5 class="my-0 fw-normal">Cinta métrica 8MTS</h5>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title pricing-card-title">$9.99<small class="text-muted fw-light"> PZA</small>
+                    </h3>
+                    <ul class="list-unstyled mt-2 mb-4">
+                      <li>
+                        <img src="Imagenes/cinta.png" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+                      </li>
+                    </ul>
+                    <a href="html/compra.html">
+                      <button type="button" class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button>
+                    </a>
+                    <button type="button" class="text-center  btn btn-sm btn-outline-success agregar-carrito"
+                      onclick="agregarProducto2(this)" data-id="8">
+                      <img src="Imagenes/carro.png" class="ico" alt="Carrito">
+                    </button>
+                    <input class="cantidad" type="number" value="1" min="1">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-8 text-white bg-success mb-3">
+                    <h5 class="my-0 fw-normal">Tenazas Acanaladas-KING TONY-6511C</h5>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title pricing-card-title">$5.99<small class="text-muted fw-light"> PZA</small>
+                    </h3>
+                    <ul class="list-unstyled mt-2 mb-4">
+                      <li>
+                        <img src="Imagenes/tenaza.png" class="img-thumbnail" alt="Cinque Terre" width="160"
+                          height="136">
+                      </li>
+                    </ul>
+                    <a href="html/compra.html" ><button type="button"
+                        class="text-center  btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+                      class="text-center  btn btn-sm btn-outline-success agregar-carrito"
+                      onclick="agregarProducto2(this)" data-id="3"><img src="Imagenes/carro.png" class="ico"
+                        alt="Carrito"></button>
+                    <input class="cantidad"  type="number" value="1" min="1">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center lista-productos p-5">
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-8 text-white bg-success mb-3">
+                    <h5 class="my-0 fw-normal">Manguera reforzada 1/2 pul x100 pies</h5>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title pricing-card-title">$24.95<small class="text-muted fw-light"> PZA</small>
+                    </h3>
+                    <ul class="list-unstyled mt-2 mb-4">
+                      <li>
+                        <img src="Imagenes/manguera.jpg" class="img-thumbnail" alt="Cinque Terre" width="133"
+                          height="136">
+                      </li>
+                    </ul>
+                    <a href="html/compra.html" ><button type="button"
+                        class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+                      class="text-center btn btn-sm btn-outline-success agregar-carrito"
+                      onclick="agregarProducto2(this)" data-id="12"><img src="Imagenes/carro.png" class="ico"
+                        alt="Carrito"></button>
+                    <input class="cantidad"  type="number" value="1" min="1">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-8 text-white bg-success mb-3">
+                    <h5 class="my-0 fw-normal">Pistola para riego 5 vías</h5>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title pricing-card-title">$5.99<small class="text-muted fw-light"> PZA</small>
+                    </h3>
+                    <ul class="list-unstyled mt-2 mb-4">
+                      <li>
+                        <img src="Imagenes/pistola.jpg" class="img-thumbnail" alt="Cinque Terre" width="125"
+                          height="136">
+                      </li>
+                    </ul>
+                    <a href="html/compra.html" ><button type="button"
+                        class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+                      class="text-center btn btn-sm btn-outline-success agregar-carrito"
+                      onclick="agregarProducto2(this)" data-id="13"><img src="Imagenes/carro.png" class="ico"
+                        alt="Carrito"></button>
+                    <input class="cantidad"  type="number" value="1" min="1">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-8 text-white bg-success mb-3">
+                    <h5 class="my-0 fw-normal">rastrillo para jardín</h5>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title pricing-card-title">$8.00<small class="text-muted fw-light"> PZA</small>
+                    </h3>
+                    <ul class="list-unstyled mt-2 mb-4">
+                      <li>
+                        <img src="Imagenes/rastrillo.jpg" class="img-thumbnail" alt="Cinque Terre" width="125"
+                          height="136">
+                      </li>
+                    </ul>
+                    <a href="html/compra.html" ><button type="button"
+                        class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+                      class="text-center btn btn-sm btn-outline-success agregar-carrito"
+                      onclick="agregarProducto2(this)" data-id="14"><img src="Imagenes/carro.png" class="ico"
+                        alt="Carrito"></button>
+                    <input class="cantidad"  type="number" value="1" min="1">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+    <h3 class="text-sm-center">Catálogo por categorias</h3><br>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <a class="nav-link" href="#viaja">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-body btn btn-outline-success2 " data-bs-toggle="collapse" href="#cole1">
+              <img src="Imagenes/contruccion2.jpg" class="card-img img-fluid hola" alt="Cinque Terre" height="300">
+              <div class="card-body card-img-overlay">
+                <h5 class="card-title text-center titulo-categorias">Construcción</h5>
+                <p class="card-text text-center texto-categorias">Nos especializamos en la distribucion de materiales de construccion de la mas alta calidad, cumpliendo normas
+                  internacionales de calidad y seguridad.
+                </p>
+              </div>
+              <p class="tea text-center">Construcción</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a class="nav-link" href="#viaja1">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-body btn btn-outline-success2" data-bs-toggle="collapse" href="#cole2">
+              <img src="Imagenes/sala.jpg" class="card-img img-fluid hola" alt="Cinque Terre" height="300">
+              <div class="card-body card-img-overlay">
+                <h5 class="card-title text-center titulo-categorias">Domesticos</h5>
+                <p class="card-text text-center texto-categorias">En nuestra categorias de domesticos, encuentras todo par tu hogar, para darle un toque unico.</p>
+              </div>
+              <p class="tea text-center">Domésticos</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a class="nav-link" href="#viaja2">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-body btn btn-outline-success2" data-bs-toggle="collapse" href="#cole3">
+              <img src="Imagenes/fontaneria2.png" class="card-img img-fluid hola" alt="Cinque Terre" height="300">
+              <div class="card-body card-img-overlay">
+                <h5 class="card-title text-center titulo-categorias">Fontanería</h5>
+                <p class="card-text text-center texto-categorias">Pensando en renovar tu baño?, cansado de lidiar con problemas de fontaneria?, ofrecemos una amplia gama
+                  de accesorios para el baño y tuberias.
+                </p>
+              </div>
+              <p class="tea text-center">Fontanería</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a class="nav-link" href="#viaja3">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-body  btn btn-outline-success2" data-bs-toggle="collapse" href="#cole4">
+              <img src="Imagenes/pintura.jpg" class="card-img img-fluid hola" alt="Cinque Terre" height="300">
+              <div class="card-body card-img-overlay">
+                <h5 class="card-title text-center titulo-categorias">Pinturas</h5>
+                <p class="card-text text-center texto-categorias">Si estas aburrido del color de tu casa, dejalo en manos de expertos y dale un toque unico y personal a tu espacio</p>
+              </div>
+              <p class="tea text-center">Pinturas</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a class="nav-link" href="#viaja4">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-body btn btn-outline-success2" data-bs-toggle="collapse" href="#cole5">
+              <img src="Imagenes/he.jpg" class="card-img img-fluid hola" alt="Cinque Terre" height="300">
+              <div class="card-body card-img-overlay">
+                <h5 class="card-title text-center titulo-categorias">Herramientas</h5>
+                <p class="card-text text-center texto-categorias">Ofrecemos una amplia gamas de herramientas de marcas reconocidas, para poner una repisa en casa, o una herramienta
+                  que utilizes todos los dias en el trabajo
+                </p>
+              </div>
+              <p class="tea text-center">Herramientas</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a class="nav-link" href="#viaja5">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-body btn btn-outline-success2" data-bs-toggle="collapse" href="#cole6">
+              <img src="Imagenes/jardin.jpg" class="card-img img-fluid hola" alt="Cinque Terre" height="300">
+              <div class="card-body card-img-overlay">
+                <h5 class="card-title text-center titulo-categorias">Jardinería</h5>
+                <p class="card-text text-center texto-categorias">Un amante de las plantas?, ofrecemos desde herramientas para cuidar tus plantas, a herbicidas naturas y abonos organicos
+                  para hacer que tus plantas crescan sanas y fuertes
+                </p>
+              </div>
+              <p class="tea text-center">Jardinería</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center collapse lista-productos" id="cole1">
+      <div class="col" id="viaja">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Sierra circular GKS 235 Professional</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$105.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/sierra.png" class="img-thumbnail" alt="Cinque Terre" width="204" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html">
+              <button type="button" class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar
+              </button>
+            </a>
+            <button type="button" class="text-center btn btn-sm btn-outline-success agregar-carrito"
+              onclick="agregarProducto2(this)" data-id="1">
+              <img src="Imagenes/carro.png" class="ico" alt="Carrito">
+            </button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Mazclador de Cemento</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$36.75<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/mezclador.jpg" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button" class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar
+              </button></a><button type="button"
+              class="text-center  btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="2"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Tenazas Acanaladas-KING TONY-6511C</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$5.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/tenaza.png" class="img-thumbnail" alt="Cinque Terre" width="204" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button" class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar
+              </button></a><button type="button"
+              class="text-center  btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="3"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Marco sierra 30 trozar BAHCO</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$6.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/marco.png" class="img-thumbnail" alt="Cinque Terre" width="204" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button" class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar
+              </button></a><button type="button"
+              class="text-center  btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="4"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Taladro electrico Serie 18V</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$11.69<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/taladro.png" class="img-thumbnail" alt="Cinque Terre" width="145" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button" class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar
+              </button></a><button type="button"
+              class="text-center  btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="5"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Corta Tubos 1/8 Pulg</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$5.15<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/cortatubo.png" class="img-thumbnail" alt="Cinque Terre" width="204" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button" class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar
+              </button></a><button type="button"
+              class="text-center  btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="6"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Pala Punta mango anilla BELLOTA</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$7.86<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pala.png" class="img-thumbnail" alt="Cinque Terre" width="120" height="139">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button" class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar
+              </button></a><button type="button"
+              class="text-center  btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="7"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Cinta métrica 8MTS</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$9.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/cinta.png" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" >
+              <button type="button" class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button>
+            </a>
+            <button type="button"
+              class="text-center  btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="8"><img src="Imagenes/carro.png" class="ico" alt="Carrito">
+            </button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Llave inglesa Ajustable 23001 de Tekton</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$10.65<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/llave.jpg" class="img-thumbnail" alt="Cinque Terre" width="200" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button" class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar
+              </button></a><button type="button"
+              class="text-center btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="9"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="d-grid col-6 mx-auto">
+        <button class="btn btn-sm" data-bs-toggle="collapse" href="#cole1"><img src="Imagenes/regreso.png"
+            class="ic"></button>
+      </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center collapse lista-productos" id="cole2">
+      <div class="col" id="viaja1">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Taladro electrico Serie 18V</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$11.69<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/taladro.png" class="img-thumbnail" alt="Cinque Terre" width="145" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="10"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Martillo madera STANLEY 13oz</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$4.75<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/martillo.jpg" class="img-thumbnail" alt="Cinque Terre" width="135" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="11"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Manguera reforzada 1/2 pul x100 pies</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$24.95<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/manguera.jpg" class="img-thumbnail" alt="Cinque Terre" width="145" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="12"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Pistola para riego 5 vías</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$5.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pistola.jpg" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="13"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">rastrillo para jardín</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$8.00<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/rastrillo.jpg" class="img-thumbnail" alt="Cinque Terre" width="135" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="14"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Guantes de jardinería TRUPER</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$6.65<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/guantes.jpg" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="15"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Regadera de metal para jardín</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$10.75<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/rega.jpg" class="img-thumbnail" alt="Cinque Terre" width="145" height="139">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="16"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Juego de Jardineria TRUPER</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$23.46<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/truper.jpg" class="img-thumbnail" alt="Cinque Terre" width="110" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="17"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Tenazas Acanaladas-KING TONY-6511C</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$5.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/tenaza.png" class="img-thumbnail" alt="Cinque Terre" width="204" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-sm btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-sm btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="18"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="d-grid col-6 mx-auto">
+        <button class="btn btn-sm" data-bs-toggle="collapse" href="#cole2"><img src="Imagenes/regreso.png"
+            class="ic"></button>
+      </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center collapse lista-productos" id="cole3">
+      <div class="col" id="viaja2">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Corta Tubos 1/8 Pulg</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$5.15<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/cortatubo.png" class="img-thumbnail" alt="Cinque Terre" width="204" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="19"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Sierra</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$9.32<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/sierra1.jpg" class="img-thumbnail" alt="Cinque Terre" width="180" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="20"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Codo 90PVC SHC 80</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$2.95<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/curva1.png" class="img-thumbnail" alt="Cinque Terre" width="145" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="21"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Ducha Eco rociador</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$43.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/ducha.jpg" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="22"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Ducha eléctrica 120v/5500w</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$60.89<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/ducha1.jpg" class="img-thumbnail" alt="Cinque Terre" width="135" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="23"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Llave plástica para lavamanos</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$4.95<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/lavado.jpg" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="24"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">SCARLET llave para lavamanos</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$35.00<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/lava1.jpg" class="img-thumbnail" alt="Cinque Terre" width="100" height="139">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="25"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Asiento para inodoro pesado Boné</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$40.90<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/asien1.jpg" class="img-thumbnail" alt="Cinque Terre" width="130" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="26"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Asiento para inodoro redondo blanco</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$20.75<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/asiento.jpg" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="27"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="d-grid col-6 mx-auto">
+        <button class="btn btn-sm " data-bs-toggle="collapse" href="#cole3"><img src="Imagenes/regreso.png"
+            class="ic"></button>
+      </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center collapse lista-productos" id="cole4">
+      <div class="col" id="viaja3">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Látex libre de olor SHERWIN WILLIAMS</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$39.00<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pin1.png" class="img-thumbnail" alt="Cinque Terre" width="300" height="300">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="28"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Excello pizarras SHERWIN WILLIAMS</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$28.50<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pin2.png" class="img-thumbnail" alt="Cinque Terre" width="300" height="300">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="29"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">faux impressions SHERWIN WILLIAMS</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$5.90<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pin3.jpg" class="img-thumbnail" alt="Cinque Terre" width="250" height="300">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="30"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Excello látex flexible SHERWIN WILLIAMS</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$36.00<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pin4.png" class="img-thumbnail" alt="Cinque Terre" width="300" height="300">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="31"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Excello Látex lavable SHERWIN WILLIAMS</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$35.78<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pin5.png" class="img-thumbnail" alt="Cinque Terre" width="300" height="300">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="32"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Colonial style látex SHERWIN WILLIAMS</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$20.25<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pin6.png" class="img-thumbnail" alt="Cinque Terre" width="300" height="300">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="33"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Excello Látex acrílico SHERWIN WILLIAMS</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$31.75<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pin7.png" class="img-thumbnail" alt="Cinque Terre" width="300" height="300">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="34"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Peninsular Látex SHERWIN WILLIAMS</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$14.46<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pin8.png" class="img-thumbnail" alt="Cinque Terre" width="300" height="300">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="35"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Excello Base aceite SHERWIN WILLIAMS</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$35.00<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pin9.png" class="img-thumbnail" alt="Cinque Terre" width="300" height="300">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="36"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="d-grid col-6 mx-auto">
+        <button class="btn btn-sm " data-bs-toggle="collapse" href="#cole4"><img src="Imagenes/regreso.png"
+            class="ic"></button>
+      </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center collapse lista-productos" id="cole5">
+      <div class="col" id="viaja4">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Sierra circular GKS 235 Professional</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$105.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/sierra.png" class="img-thumbnail" alt="Cinque Terre" width="204" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="37"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Pulidora 7" GWS 26-180 Bosch</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$99.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/puli.jpg" class="img-thumbnail" alt="Cinque Terre" width="204" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="38"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Tenazas Acanaladas-KING TONY-6511C</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$5.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/tenaza.png" class="img-thumbnail" alt="Cinque Terre" width="204" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="39"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Marco sierra 30 trozar BAHCO</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$6.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/marco.png" class="img-thumbnail" alt="Cinque Terre" width="204" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="40"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Taladro electrico Serie 18V</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$11.69<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/taladro.png" class="img-thumbnail" alt="Cinque Terre" width="145" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="41"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Corta Tubos 1/8 Pulg</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$5.15<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/cortatubo.png" class="img-thumbnail" alt="Cinque Terre" width="204" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="42"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Inversor Soldador Elite Arc 160s</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$526.78<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/soldador.png" class="img-thumbnail" alt="Cinque Terre" width="120" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="43"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Cinta métrica 8MTS</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$9.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/cinta.png" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="44"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">SB122 Bateria 12V-2AMP</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$60.98<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/bateria.png" class="img-thumbnail" alt="Cinque Terre" width="105" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="45"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="d-grid col-6 mx-auto">
+        <button class="btn btn-sm" data-bs-toggle="collapse" href="#cole5"><img src="Imagenes/regreso.png"
+            class="ic"></button>
+      </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center collapse lista-productos" id="cole6">
+      <div class="col" id="viaja5">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Cortadora de Cesped a NAFTA 4HP 141CC</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$398.71<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/cesped.jpg" class="img-thumbnail" alt="Cinque Terre" width="135" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="46"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Tijera para podar Cesped 20pulg</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$7.75<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/tijeras.jpg" class="img-thumbnail" alt="Cinque Terre" width="135" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="47"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Manguera reforzada 1/2 pul x100 pies</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$24.95<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/manguera.jpg" class="img-thumbnail" alt="Cinque Terre" width="145" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="48"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Pistola para riego 5 vías</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$5.99<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/pistola.jpg" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="49"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">rastrillo para jardín</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$8.00<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/rastrillo.jpg" class="img-thumbnail" alt="Cinque Terre" width="135" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" > <button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="50"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Guantes de jardinería TRUPER</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$6.65<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/guantes.jpg" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" > <button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="51"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Regadera de metal para jardín</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$10.75<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/rega.jpg" class="img-thumbnail" alt="Cinque Terre" width="145" height="139">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="52"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Juego de Jardineria TRUPER</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$23.46<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/truper.jpg" class="img-thumbnail" alt="Cinque Terre" width="110" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" ><button type="button"
+                class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">Comprar</button></a><button type="button"
+              class="text-center btn btn-ms btn-outline-success agregar-carrito" onclick="agregarProducto2(this)"
+              data-id="53"><img src="Imagenes/carro.png" class="ico" alt="Carrito"></button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-8 text-white bg-success mb-3">
+            <h5 class="my-0 fw-normal">Descrozadora a gasolina 17 52 cc</h5>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">$60.87<small class="text-muted fw-light"> PZA</small></h3>
+            <ul class="list-unstyled mt-2 mb-4">
+              <li>
+                <img src="Imagenes/des.jpg" class="img-thumbnail" alt="Cinque Terre" width="125" height="136">
+              </li>
+            </ul>
+            <a href="html/compra.html" >
+              <button type="button" class="text-center btn btn-ms btn-outline-success" onclick="compraDirecta(this)">
+                Comprar
+              </button>
+            </a>
+            <button type="button" class="text-center btn btn-ms btn-outline-success agregar-carrito"
+              onclick="agregarProducto2(this)" data-id="54">
+              <img src="Imagenes/carro.png" class="ico" alt="Carrito">
+            </button>
+            <input class="cantidad"  type="number" value="1" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="d-grid col-6 mx-auto">
+        <button class="btn btn-sm" data-bs-toggle="collapse" href="#cole6"><img src="Imagenes/regreso.png"
+            class="ic"></button>
+      </div>
+    </div>
+
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top te" id="Acercade">
+      <div class=" row p-3 mb-2 bg-success text-light">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="Imagenes/logo2.png" alt="" width="200" height="200">
+          <small class="d-block mb-3 text-light">&copy; 2020–2021</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Servicio al Cliente</h5>
+          <ul class="list-unstyled text-small">
+            <!--agregar link de pagina en "href"-->
+            <li class="mb-1"><a class="link-secondary text-light" href="html/contactanos.html#contacto">Contactanos</a>
+            </li>
+            <li class="mb-1"><a class="link-secondary text-light" href="html/contactanos.html#terminos">Términos y
+                Condiciones</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="html/contactanos.html#compralinea">¿Como comprar
+                en linea?</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="html/contactanos.html#preguntas">Preguntas
+                Frecuentes</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="html/contactanos.html#pagoOnline">Forma de pago
+                online</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Nuestra Ferreteria</h5>
+          <ul class="list-unstyled text-small ">
+            <!--agregar link de pagina en "href"-->
+            <li class="mb-1"><a class="link-secondary text-light" href="html/nuestraferreteria.html#acercaFie">Acerca de
+                El Fierro Mallet</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="html/nuestraferreteria.html#visionmision">Visión
+                y Misión</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="html/nuestraferreteria.html#trabajo">Como
+                trabajar con nosotros</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Siguenos en Redes Sociales</h5>
+          <a href="https://www.facebook.com/" ><img src="Imagenes/facebook2.png" class="ic"
+              alt="facebook"></a>
+          <a href="https://www.instagram.com/" ><img src="Imagenes/instagram2.png" class="ic"
+              alt="instagram"></a>
+          <a href="https://twitter.com/" ><img src="Imagenes/twitter2.png" class="ic" alt="twitter"></a>
+          <ul class="list-unstyled text-small">
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

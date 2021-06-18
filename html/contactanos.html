@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Servicio al Cliente </title>
+	<link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.css">
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/pricing/">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../css/custom.css">
+	<link rel="icon" href="../Imagenes/logo.png">
+	<link href="../css/form-validation.css" rel="stylesheet">
+</head>
+
+<body class="fondo">
+	<div class="container-md py-3 fondo2">
+
+		<div class="py-5 text-center">
+			<img class="d-block mx-auto mb-4 img-fluid" src="../Imagenes/contactanos.png" alt="">
+		</div>
+		<div id="contacto">
+			<form id="form1">
+				<h3>
+					<center class="titulos">Contactanos</center>
+				</h3>
+				<div class="row g-3">
+					<div class="col-sm-8">
+						<label for="firstName" class="form-label">Nombres</label>
+						<input type="text" class="form-control" id="firstName" placeholder="Nombre Completo" value=""
+							required pattern="[a-zA-Z]*">
+						<div class="invalid-feedback">
+							Nombre es requerido.
+						</div>
+					</div>
+
+					<div class="col-sm-4">
+						<label for="edad" class="form-label">Edad</label>
+						<input type="number" class="form-control" id="edad" required maxlength="100" minlength="18"
+							value="18">
+						<div class="invalid-feedback">
+						</div>
+					</div>
+
+					<div class="col-sm-8">
+						<label for="email" class="form-label">Email</label>
+						<input type="email" class="form-control" id="email" placeholder="you@example.com" required
+							pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$">
+						<div class="invalid-feedback">
+							Por favor escribir correctamente el correo.
+						</div>
+					</div>
+
+					<div class="col-sm-4">
+						<label for="telefono" class="form-label">Telefono</label>
+						<input type="telefono" class="form-control" id="telefono" required maxlength="8" minlength="8"
+							pattern="[0-9]*">
+						<div class="invalid-feedback">
+						</div>
+					</div>
+
+					<div class="col-sm-12">
+						<label for="mensaje" class="form-label">Mensaje</label>
+						<input type="text" class="form-control" id="mensaje" required>
+						<div class="invalid-feedback">
+						</div>
+					</div>
+					<div class="text-center">
+						<button class="w-70 btn btn-outline-success btn-sm" type="button"
+							onclick="contactar()">Envíar</button>
+					</div>
+
+					<div>
+						<p class="text-sm-center">Contactanos directamente a los numeros Teléfono(2453-1928)
+							whatsapp(7620-9271) </p>
+					</div>
+				</div>
+			</form>
+		</div>
+		<br><br><br>
+		<div id="terminos">
+			<h3 class="text-sm-center titulos">Terminos y Condiciones</h3>
+			<br>
+			Al registrarse en <b>elfierrromallet.com.sv</b>, acepta en conformidad las condiciones y acepta haber leído
+			nuestra política de privacidad.</p>
+
+			<p><b>Los acuerdos legales expuestos a continuación, rigen el uso que usted haga de la Tienda en línea El
+					Fierro Mallet.</b> </p><br><br>
+
+			<h3 class="text-sm-center titulos">Introducción:</h3>
+
+			<p>Por favor, lea los siguientes términos, condiciones y reglas básicas que rigen el uso de la Tienda en
+				línea El Fierro Mallet.</p>
+
+			<ol>
+				<li>El uso de la Tienda en línea <b>elfieeromallet.com.sv </b>implica la aceptación incondicional e
+					irrevocable de que toda la información y actividades realizadas mediante el sitio web, se encuentran
+					regidas por estos Términos y Condiciones.</li><br>
+				<li>Asimismo, los Términos y Condiciones podrán ser cambiados por Almacenes El Fierro Mallet, S.A. de
+					C.V., en cualquier momento y a exclusivo criterio de la empresa, razón por la cual usted deberá
+					revisar estos términos y condiciones cada vez que visite el sitio web.</li><br>
+				<li>El Fierro Mallet se reserva el derecho de modificar o interrumpir el servicio ofrecido, ya sea en
+					forma permanente o transitoria, sin aviso previo y/o consentimiento de usuarios, en cualquier
+					momento y a exclusivo criterio de la empresa. La información personal que usted (en adelante el
+					"Usuario") ingresa es totalmente confidencial y se
+					mantiene, en forma estricta entre usuario y Almacenes</li><br>
+				<li>El Fierro Mallet, S.A. De C.V., en ningún caso será entregada a terceros. Para poder comprar en la
+					tienda en línea vidri.com.sv, deberá haberse registrado como usuario, aceptando los términos y
+					condiciones y leído las políticas de privacidad.</li><br>
+			</ol>
+		</div>
+		<br>
+
+		<div id="compralinea">
+			<h3 class="text-sm-center titulos">Compra de Productos en la Tienda en línea de el Fierro Mallet</h3>
+			<br>
+
+			<ul>
+				<li>Únicamente podrá comprar productos que estén publicados para su venta y cuyos detalles aparezcan en
+					el sitio web.</li>
+				<li>Los detalles de los productos disponibles para su compra (incluyendo su correspondiente precio) se
+					encuentran especificados en nuestra tienda en línea.</li>
+				<li>Todos los precios de los productos mostrados en el sitio web incluyen IVA. Una vez que el usuario ha
+					encontrado los productos que desee adquirir, dichos productos deberán ser incluidos al carro de
+					compras.</li>
+				<li>Los productos o servicios y los precios ofrecidos en el sitio web, no necesariamente coincidirán con
+					los productos, servicios y precios ofrecidos en las sucursales.</li>
+				<li>El precio que se deberá pagar por cada artículo adquirido será el precio publicado por cada artículo
+					en el sitio web al momento de la compra en línea.</li>
+				<li>Las ofertas y promociones en la tienda en línea <b>elfierromallet.com.sv</b>, tienen validez,
+					mientras estén publicadas en la misma.</li>
+				<li>El usuario de la tienda en línea tiene derecho a cancelar cualquier pedido que haya realizado y
+					recibir el reembolso de su dinero, siempre y cuando el pedido esté en las condiciones originales de
+					su envío o recolección en sucursal.</li>
+				<li>El producto a devolver es responsabilidad del cliente hasta que llega a Ferretería El Fierro Mallet
+					, S.A. De C.V. Le aconsejamos que en la devolución utilice un sistema de envío que garantice la
+					integridad de los productos.</li>
+				<li>La política de cambio establece que sólo pueden realizarse los cambios en la sucursal desde donde
+					fue entregada o enviada la mercadería.</li>
+				<li>La política de cambio establece que sólo se aceptan cambios hasta 30 días después de su compra
+					presentando la factura física.</li>
+				<li>Los productos en rebaja o liquidación no tienen cambio.</li>
+				<li>Cuando el producto que recibe no corresponde con el producto que compró o no se especifica en el
+					pedido, no está obligado a aceptar la entrega del producto, tanto cuando se recoge en sucursal o si
+					se recibe por servicio a domicilio.</li>
+				<li>El cliente siempre debe conservar las facturas originales, pues es requisito indispensable ante
+					cualquier reclamo o devolución.</li>
+				<li>El usuario pagará su compra con tarjetas de crédito o débito VISA, AMERICAN EXPRESS y MASTERCARD que
+					permitan comprar en línea; emitidas en cualquier parte del mundo. O si lo prefiere por medio de
+					PayPal.</li>
+				<li>El costo por envīo a domicilio queda sujeto al lugar de entrega.</li>
+				<li>El valor mínimo de la compra para optar al servicio de entrega gratis a domicilio es de $25.00
+					dentro del perímetro de las zonas metropolitanas de San Salvador, Santa Ana, Sonsonate y San Miguel.
+				</li>
+				<li>La compra mínima para recoger en cualquiera de nuestras sucursales es de $10.00.</li>
+				<li>Las entregas a domicilio se realizan en horario de lunes a viernes desde las 8:00 a.m. hasta las
+					5:00 p.m.; en un máximo de 1 a 3 días hábiles en el área metropolitana y al interior no menos de 3
+					días hábiles, de acuerdo al horario que se especifique en la tienda en línea o que acuerde con
+					servicio a domicilio.</li>
+				<li>El cliente asume la responsabilidad de recoger el pedido en la sucursal de su preferencia siempre y
+					cuando el mismo así lo desee.</li>
+				<li>Se dispone de un máximo de 7 días hábiles para retirar un pedido en línea en sucursal, pasado este
+					tiempo el mismo será cancelado y los fondos revertidos, por el medio de pago utilizado al momento de
+					efectuar la compra, descontando los gastos ocasionados durante el proceso.</li>
+				<li>Los gastos por devolución de producto cancelados con tarjeta de crédito (comisión del emisor de la
+					tarjeta) será descontado del pago.</li>
+				<li>En el momento de anular una compra quedará como flotante en el estado de cuenta del tarjetahabiente,
+					siendo el banco emisor el responsable de liberarlo. Las entregas de compras en sucursal estan
+					sujetas a disponibilidad al momento de efectuada la compra, nuestra promesa de entrega parte del
+					momento en que la compra es aprobada por nuestra área de riesgos. Se notificara via correo
+					electrónico al cliente que solicitó retirar pedido en sucursal una vez la compra se encuentre lista
+					para retiro. Para retiro en sucursal, el cliente deberá presentar: DUI más clave de entrega
+					proporcionada al momento de efectuar la compra.</li>
+				<li>La compra no se entregará a otra persona diferente a la especificada por el cliente.</li>
+				<li>El cliente deberá proporcionar sus datos de DUI y firmar de conforme y satisfecho de los productos
+					entregados y facturados.</li>
+				<li>Toda información proporcionada deberá ser verdadera, exacta y completa.</li>
+				<li>El Usuario es único y exclusivo responsable de la información que brinda mediante el uso del Sitio
+					Web.</li>
+				<li>El Usuario será único y exclusivo responsable respecto a las consecuencias que genere cualquier
+					inexactitud o falsedad de la información brindada.</li>
+				<li>La transacción deberá ser realizada unicamente por el titular de la tarjeta o tarjetahabiente.</li>
+				<li>Ferretería El Fierro Mallet, S.A. de C.V. puede en cualquier momento revisar estos términos de uso
+					aquí contenidos, por medio de la actualización de este anuncio.</li>
+				<li>Al usar la tienda en línea El Fierro, el usuario conviene en darse por enterado por cualquiera de
+					tales revisiones, las cuales estarán vigentes a partir del momento en que las mismas sean accesibles
+					para los usuarios; debiendo entonces visitar periódicamente esta página para conocer los términos
+					vigentes en ese momento, a los cuales el usuario estará obligado en el momento que decida utilizar
+					este sitio web.</li>
+				<li>Las compras realizadas que presenten algun tipo de inconsistencia quedan sujetas a aprobación.</li>
+				<li>El horario de aprobación de compras es de lunes a viernes desde las 8:00 a.m. hasta las 5:30 p.m.
+					las compras realizadas el día sábado y domingo, serán aprobadas en el siguiente día hábil
+					exceptuando los asuetos oficiales.</li>
+				<li>Los datos para envío de producto al interior del país son responsabilidad directamente del cliente.
+					Nos reservamos el derecho de entrega a domicilio en lugares reportados como peligrosos, por
+					seguridad de nuestro personal.</li>
+				<li>Si usted no está de acuerdo en todos y cada uno de los términos aquí expresados, absténgase de usar
+					el servicio.</li>
+			</ul>
+		</div>
+		<br><br>
+
+		<div id="preguntas" class="row">
+			<div class="col-md-8">
+				<h3 class="text-sm-center titulos">Preguntas Frecuentes</h3>
+
+				Envío a Domicilio
+				<ul>
+					<li>¿Cuál es el monto mínimo de compra para envió a domicilio?</li>
+					<p>R// El monto minimo para usar el servicio a domicilio es de $50.00</p>
+					<li>¿Qué sucursales cuentan con la opción de entrega a domicilio?</li>
+					<p>R// Todas nuestras sucursales cuentan con servicio a domicilio</p>
+					<li>¿Cuáles son los horarios de entrega?</li>
+					<p>R// Los horarios de entregan son, de Lunes a Viernes desde las 7:00 AM hasta las 6:00 PM</p>
+					<li>¿Cuál es la hora límite de compra para recibir mi pedido al día siguiente usando la opción de Envío
+						Express?</li>
+						<p>R// La hora limites es 12:00 AM, si aun tenemos espacio disponible, nuestros asesores le inforrmaran</p>
+				</ul>
+
+				Pago en línea
+				<ul>
+					<li>¿Cómo realizar el pago en línea?</li>
+					<p>R// Puedes realizar tus pagos desde nuestra pagina web, con las diversas opciones de pago que ofrecemos</p>
+					<li>¿Qué tipo de tarjetas se puede utilizar para pagar en línea</li>
+					<p>R// Puedes usar tarjeta tu tarjeta de credito o debito, recuerda que debes tener fondos disponibles en tu tarjeta de debito</p>
+					<li>¿Se puede realizar el pedido y pagar al momento de recogerlo?</li>
+					<p>R// Si, siempre y cuando no excedas el tiempo limite de 24 horas, si no recoges tu pedido en el tiempo establecido, tu pedido sera cancelado</p>
+					<li>¿Cuánto tarda en procesar la transaccion del pago?</li>
+					<p>R// Aproximadamente 4 horas</p>
+					<li>¿Al momento de realizar el pago en línea queda algún tipo de constacia que el pago ya se realizo?
+						<p>R// Se envia un correo con el recibo de pago, al correo proporcionado por ti</p>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<img src="../Imagenes/FAQ.png" class="img-fluid">
+			</div>
+		</div>
+
+		<br><br><br>
+
+		<div id="pagoOnline">
+			<h3 class="text-sm-center titulos">Forma de Pago Online</h3>
+			<p>En <b>elfieeromallet.com.sv</b> puedes usar las siguientes tarjetas de crédito y débito como métodos de
+				pago:<b> Visa, MasterCard y PayPal.</b></p>
+
+			<p class="text-sm">Pasos:</p>
+
+			<ul>
+				<li>Ingresa el nombre del titular de la tarjeta.</li>
+				<li>Ingresa el número de la tarjeta sin espacios ni guiones.</li>
+				<li>Selecciona el mes de vencimiento de la tarjeta.</li>
+				<li>Selecciona el año de vencimiento de la tarjeta.</li>
+				<li>Ingresa el código CVV.</li>
+			</ul>
+
+			<p class="text-sm-center titulos">¿Cómo identifico el código CVV de mi tarjeta?</p>
+			<center><img class="img-fluid" src="../Imagenes/tarjetacvv.png"></center><br>
+			<center>
+				<img src="../Imagenes/formas.png" class="img-fluid">
+			</center>
+		</div>
+		<br>
+		<br>
+		<p class="text-sm-center text-dark">2020 - 2021 ©. Todos los derechos reservados.</p>
+
+		<div>
+			<a href="../index.html" title="Click para volver"><img src="../Imagenes/regreso2.png" class="iconi"></a>
+
+		</div>
+	</div>
+	<script src="../js/contactanos.js"></script>
+	<script src="../js/form-validation.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("user_Oukd8Nq24xOlEcdoQy9MH");
+		})();
+	</script>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top te container-fluid" id="Acercade">
+      <div class=" row p-3 mb-2 bg-success text-light">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="../Imagenes/logo2.png" alt="" width="200" height="200">
+          <small class="d-block mb-3 text-light">&copy; 2020–2021</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Servicio al Cliente</h5>
+          <ul class="list-unstyled text-small">
+            <!--agregar link de pagina en "href"-->
+            <li class="mb-1"><a class="link-secondary text-light" href="contactanos.html#contacto">Contactanos</a>
+            </li>
+            <li class="mb-1"><a class="link-secondary text-light" href="contactanos.html#terminos">Términos y
+                Condiciones</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="contactanos.html#compralinea">¿Como comprar
+                en linea?</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="contactanos.html#preguntas">Preguntas
+                Frecuentes</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="contactanos.html#pagoOnline">Forma de pago
+                online</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Nuestra Ferreteria</h5>
+          <ul class="list-unstyled text-small ">
+            <!--agregar link de pagina en "href"-->
+            <li class="mb-1"><a class="link-secondary text-light" href="nuestraferreteria.html#acercaFie">Acerca de
+                El Fierro Mallet</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="nuestraferreteria.html#visionmision">Visión
+                y Misión</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="nuestraferreteria.html#trabajo">Como
+                trabajar con nosotros</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Siguenos en Redes Sociales</h5>
+          <a href="https://www.facebook.com/" ><img src="../Imagenes/facebook2.png" class="ic"
+              alt="facebook"></a>
+          <a href="https://www.instagram.com/" ><img src="../Imagenes/instagram2.png" class="ic"
+              alt="instagram"></a>
+          <a href="https://twitter.com/" ><img src="../Imagenes/twitter2.png" class="ic" alt="twitter"></a>
+          <ul class="list-unstyled text-small">
+          </ul>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

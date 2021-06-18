@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Ferretería</title>
+  <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/pricing/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="icon" href="../Imagenes/logo.png">
+  <link href="../css/form-validation.css" rel="stylesheet">
+</head>
+
+<body class="fondo">
+  <div class="container-md py-3 fondo2">
+    <div class="row">
+        <img src="../Imagenes/tema.png" class="d-block mx-auto mb-4 img-fluid" width="200" height="200">
+    </div>
+    <br>
+    <br>
+    <div  class="row" id="acercaFie">
+      <div class="col-lg-5 item">
+        <img src="../Imagenes/ferre.jpg" width="100%" height="350px" class="img-fluid">
+        <img src="../Imagenes/manos.png" width="75%" height="350px" class="mx-auto d-block img-fluid">
+      </div>
+      <div class="col-lg-7">
+          <p class="text-justify texto">Somos una compañía de El Salvador que inició operaciones en 2021. Nos dedicamos al comercio detallista y
+            mayorista de productos de ferretería, herramientas, pinturas, decoración, hogar, jardinería, materiales de
+            construcción, eléctrico, iluminación, fontanería y herrajes. 
+            <br>
+            <br>
+            Estamos conformados por un grupo de 12 ferreterías detallistas en dos formatos de tienda: El Fierro Mallet
+            una unidad de venta especializada en la atención a mercados y clientes contratistas, comerciales e industriales.
+            <br>
+            <br>
+            Orgullosos de ser una empresa salvadoreña nos honramos de contar con numeroso personal que labora y aporta
+            experiencia, criterio y esfuerzo a nuestra compañía, a nuestros proveedores y principalmente a nuestros
+            clientes. Todo ello sobre una base laboral de importantes prestaciones y beneficios que contribuyen a la
+            estabilidad de la empresa y sus puestos de trabajo.
+            <br>
+            <br>
+            <br>
+            Relacionarse con El Fierro Mallet es tener la posibilidad de elegir entre un amplio portafolio de productos y
+            prestigiosas marcas nacionales e internacionales. Es experimentar la importancia de formar parte de nuestro
+            personal, proveedores o clientes y de contar con una amplia gama de servicios, ideas y soluciones para atender
+            necesidades y proyectos de construcción, mantenimiento, reparación, comercio, industria y decoración.</p>
+          <br><br>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row" id="visionmision">
+        <div class="col-lg-6 text-center">
+          <br>
+        <h4 class="visionMision">Visión</h4>
+
+        <p class="texto">Ser uno de las principales tiendas de herramientas en la region, reconocidos por la calidad de nuestros servicios y productos innovadores y de alta calidad</p>
+        <br>
+
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <img class="img-fluid" src="../Imagenes/vision.png">
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+
+        <div class="col-lg-6 text-center">
+          <div>
+            <br>
+              <h4 class="visionMision">Misión</h4>
+              <p class="texto">Somos una empresa salvadoreña que brinda servicios y herramientas para El Salvadoreño, buscamos la excelencia en todo lo que ejecutamos y los equipos que proporcionamos.</p>
+          </div>
+        </div>
+
+          <div class="col-lg-6 text-center">
+            <img class="img-fluid" src="../Imagenes/mision.png">  
+          </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="trabajo">
+      <h3 class="text-sm-center">¿Cómo trabajar con nosotros?</h3><br>
+
+      <h3 class="text-sm-center">Postulación a Empleo "El Fierro Mallet"</h3>
+      <form id="formularioTrabajo">
+        <h3>
+          <center >Contactanos</center>
+        </h3>
+        <div class="row g-3">
+          <div class="col-sm-8">
+            <label for="firstName" class="form-label">Nombres</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Nombre Completo" value="" required
+              pattern="[a-zA-Z]*">
+            <div class="invalid-feedback">
+              Nombre es requerido.
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="number" class="form-control" id="edad" required maxlength="100" minlength="18" value="18">
+            <div class="invalid-feedback">
+            </div>
+          </div>
+
+          <div class="col-sm-8">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com" required
+              pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$">
+            <div class="invalid-feedback">
+              Por favor escribir correctamente el correo.
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label for="file" class="form-label">Añadir CV</label>
+            <input type="file" class="form-control" id="file" required>
+            <div class="invalid-feedback">
+              Por favor añada su documento.
+            </div>
+          </div>
+
+
+          <div class="col-sm-4">
+            <label for="sexo" class="form-label">Sexo</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="masculino">
+              <label class="form-check-label" for="masculino">
+                Masculino
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="femenino">
+              <label class="form-check-label" for="femenino">
+                Femenino
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <label for="departamento" class="form-label">Departamento</label>
+            <select class="form-select form-select-sm" required>
+              <option selected value="">Seleccione</option>
+              <option value="Sonsonate">Sonsonate</option>
+              <option value="santa ana">Santa Ana</option>
+              <option value="la libertad">La Libertad</option>
+              <option value="san salvador">San Salvador</option>
+              <option value="la paz">La Paz</option>
+              <option value="cabañas">Cabañas</option>
+              <option value="san Vicente">San Vicente</option>
+              <option value="san miguel">San Miguel </option>
+              <option value="morazan">Morazan</option>
+              <option value="la union">La Union</option>
+              <option value="usulutan">Usulutan</option>
+              <option value="chalatenango">Chalatenango</option>
+              <option value="cuscatlan">Cuscatlan</option>
+              <option value="ahuachapán">Ahuachapan</option>
+            </select>
+          </div>
+
+          <div class="col-sm-4">
+            <label for="telefono" class="form-label">Telefono</label>
+            <input type="telefono" class="form-control" id="telefono" required maxlength="8" minlength="8"
+              pattern="[0-9]*">
+            <div class="invalid-feedback">
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label for="area" class="form-label">Área a desempeñar</label>
+            <select name="área" class="form-select form-select-sm" required>
+              <option selected value="">Seleccione</option>
+              <option value="cajero">Cajero</option>
+              <option value="tecnica">Técnico en Redes</option>
+              <option value="contador">Contador</option>
+              <option value="ordenanza">Ordenanza</option>
+              <option value="montorista">Motorista</option>
+            </select>
+          </div>
+
+          <div class="text-center">
+            <button class="w-70 btn btn-outline-success btn-sm" type="button" onclick="postularEmpleo()">Envíar</button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+    <div>
+      <a href="../index.html" title="Click para volver"><img src="../Imagenes/regreso2.png" class="iconi"></a>
+
+    </div>
+  </div>
+  <script src="../js/form-validation.js"></script>
+  <script src="../js/empleo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top te container-fluid" id="Acercade">
+      <div class=" row p-3 mb-2 bg-success text-light">
+        <div class="col-12 col-md">
+          <img class="mb-2 img-fluid" src="../Imagenes/logo2.png" alt="" width="200" height="200">
+          <small class="d-block mb-3 text-light">&copy; 2020–2021</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Servicio al Cliente</h5>
+          <ul class="list-unstyled text-small">
+            <!--agregar link de pagina en "href"-->
+            <li class="mb-1"><a class="link-secondary text-light" href="contactanos.html#contacto">Contactanos</a>
+            </li>
+            <li class="mb-1"><a class="link-secondary text-light" href="contactanos.html#terminos">Términos y
+                Condiciones</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="contactanos.html#compralinea">¿Como comprar
+                en linea?</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="contactanos.html#preguntas">Preguntas
+                Frecuentes</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="contactanos.html#pagoOnline">Forma de pago
+                online</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Nuestra Ferreteria</h5>
+          <ul class="list-unstyled text-small ">
+            <!--agregar link de pagina en "href"-->
+            <li class="mb-1"><a class="link-secondary text-light" href="nuestraferreteria.html#acercaFie">Acerca de
+                El Fierro Mallet</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="nuestraferreteria.html#visionmision">Visión
+                y Misión</a></li>
+            <li class="mb-1"><a class="link-secondary text-light" href="nuestraferreteria.html#trabajo">Como
+                trabajar con nosotros</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Siguenos en Redes Sociales</h5>
+          <a href="https://www.facebook.com/" ><img src="../Imagenes/facebook2.png" class="ic"
+              alt="facebook"></a>
+          <a href="https://www.instagram.com/" ><img src="../Imagenes/instagram2.png" class="ic"
+              alt="instagram"></a>
+          <a href="https://twitter.com/" ><img src="../Imagenes/twitter2.png" class="ic" alt="twitter"></a>
+          <ul class="list-unstyled text-small">
+          </ul>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>
