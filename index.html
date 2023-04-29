@@ -11,19 +11,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/custom.css">
   <script src="plugins/bootstrap/js/bootstrap.js"></script>
+  <script src="js/twitter.js"></script>
   <link rel="icon" href="Imagenes/logo.png">
-  <script>
-    $(document).ready(function () {
-      async function logJSONData() {
-        const response = await fetch("https://graph.facebook.com/103719829350555?access_token=EAAKi87A5v7wBAEBJIPZAYrjT95E2YZBeG1DUZBwZBai0vZCVZBiwo3iOTMc7JZAvZAZBwPGVKyacqZAAfmLBunOBUNtKfv45dxOEToz5bJu1cZBdEHn7BTfBl6tbDYxWToK7GaQzRwO1UPYT1ZCol6WNtdTZBkxPZCKUWo2Dnfs9qOnlKR0cVWLThLPFYZAo1aOBQqdmZATLAwm15R8Mv5ZBRvDcyOk1I&fields=name,fan_count");
-        const jsonData = await response.json();
-        console.log(jsonData);
-      }
-
-      logJSONData();
-
-    });
-  </script>
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v16.0"
     nonce="71mHrUuh"></script>
